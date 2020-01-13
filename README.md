@@ -1,3 +1,5 @@
+Check out the project here: https://ywzheng1.github.io/react-robot-friends-app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
