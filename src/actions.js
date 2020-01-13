@@ -10,6 +10,7 @@ export const setSearchField = (text) => ({
     payload: text
 })
 
+
 export const requestRobots = () => (dispatch) => {
     dispatch( { type: REQUEST_ROBOTS_PENDING });
     fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100')
