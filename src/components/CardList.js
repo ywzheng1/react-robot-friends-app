@@ -7,11 +7,13 @@ const CardList = ({robots}) => {
         <div>
             {
             robots.map((user, i) => {
-                return <Card key={robots[i].id} id={robots[i].id} name={robots[i].name} email={robots[i].email}/>
+                if(robots[i].nationalPokedexNumber) {
+                    return <Card i= {i} key={robots[i].id} id={robots[i].nationalPokedexNumber} name={robots[i].name}/>
+                }
             })
             }
         </div>
     );
 }
  
-export default CardList;
+export default CardList; 

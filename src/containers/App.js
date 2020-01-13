@@ -15,10 +15,11 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('https://api.pokemontcg.io/v1/cards')
         .then(response => response.json())
-        .then(users => this.setState( { robots: users}))
-        
+        // .then(response => console.log(response.cards))
+        // .then(users => console.log(users.cards))
+        .then(users => this.setState( { robots: users.cards}))
     }
 
     onSearchChange = (event) => {
@@ -35,7 +36,7 @@ class App extends Component {
         } else {
             return(
                 <div className='tc'>
-                <h1>Robo Friends</h1>
+                <h1>Pokédex</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <Scroll>
                     <CardList robots={ filteredRobots } />
