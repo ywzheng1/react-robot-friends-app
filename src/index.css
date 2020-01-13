@@ -17,7 +17,7 @@ code {
 
 .search-box {
   height: 2rem;
-    width: 13rem;
+    width: 20rem;
     padding: 0.5rem;
     font-size: 0.8rem;
     border: none;
@@ -28,6 +28,20 @@ code {
       inset 6px 6px 6px 0 rgba(0, 0, 0, .05);
 }
 
+input[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+  padding: 1rem;
+}
+
+input:focus{
+  transition: all 0.5s ease-in-out;
+  outline:none;
+  box-shadow: 
+      inset 2px 2px 6px 0 rgba(255,255,255, 1), 
+      inset -6px -6px 6px 0 rgba(0, 0, 0, .05);
+}
+
 .cards-container {
   display: flex;
   flex-direction: row;
@@ -36,7 +50,6 @@ code {
 
 .pokecards-outer {
   flex: calc(20% - 5%);
-  /* width: 300px; */
   height: 20rem;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   margin: 2%;

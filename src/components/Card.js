@@ -5,7 +5,8 @@ const Card = ({name, id, i, type}) => {
         <div className="pokecards-outer">
             <div className="pokecards-inner">
                 <div className='pokecards pokecards-front'>
-                    <img className="photos" alt={name} src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`} />
+                    {/* <img className="photos" alt={name} src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`} /> */}
+                    <img className="photos" alt={name} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
                     <div>
                         <h2>{name}</h2>
                     </div>

@@ -7,9 +7,7 @@ const CardList = ({robots}) => {
         <div className="cards-container">
             {
             robots.map((user, i) => {
-                if(robots[i].nationalPokedexNumber) {
-                    return <Card i= {i} key={robots[i].id} id={robots[i].nationalPokedexNumber} name={robots[i].name} type={robots[i].types}/>
-                }
+                return <Card i= {i} key={robots[i].id} id={i+1} name={robots[i].name} type={robots[i].types}/>
             })
             }
         </div>
