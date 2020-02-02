@@ -7,11 +7,13 @@ const CardList = ({robots}) => {
         <div className="cards-container">
             {
             robots.map((user, i) => {
-                return <Card i= {i} key={robots[i].id} id={i+1} name={robots[i].name} type={robots[i].types}/>
+                const pokeUrl = robots[i].url
+                const pokeIndex = pokeUrl.split("/")[6]
+                return <Card i= {i} key={robots[i].name} id={pokeIndex} name={robots[i].name} url={robots[i].url}/>
             })
             }
         </div>
     );
 }
- 
+  
 export default CardList; 
